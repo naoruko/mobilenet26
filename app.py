@@ -40,7 +40,7 @@ class Mobilenetv2(nn.Module):
         return states
 
 st.title('画像判定アプリ')
-#st.markdown('クロマツ雌花画像で学習したモデルで判定します。)'
+st.markdown('クロマツ雌花画像で学習したモデルで判定します。)'
 #st.markdown('学習の実施は[こちら](https://github.com/saotomryo/Image_Identification/blob/master/Use_MobelenetV2.ipynb)')
 #upload_model = st.file_uploader('クロマツ雌花画像で学習したモデルで判定します。)',type=['pth'])
 
@@ -56,7 +56,7 @@ st.title('画像判定アプリ')
 #        upload_model = None
 #else:
     #try:
-#net = mobilenetv2.mobilenet_v2(pretrained=True)
+net = torch.load(model92_20220719(pretrained=True))
         #json_open = open('imagenet1000_clsidx_to_labels.json', 'r')
         #json_load = json.load(json_open)
     #except:
