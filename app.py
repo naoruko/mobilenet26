@@ -56,10 +56,11 @@ st.markdown('クロマツ雌花画像で学習したモデルで判定します�
 #        upload_model = None
 #else:
     #try:
-net = net.load_state_dict(torch.load(
+# 訓練済みモデル
+    net = Net()
+    net.load_state_dict(torch.load(
         "model92_20220719.pth", map_location=torch.device("cpu")
         ))
-            
             
 #net = model92_20220719(pretrained=True)
         #json_open = open('imagenet1000_clsidx_to_labels.json', 'r')
